@@ -29,10 +29,10 @@ git clone https://github.com/sing1ee/elasticsearch-jieba-plugin.git --recursive
 打包后的插件在目录 `build/distributions`
 - 安装插件
 ```shell script
-cp build/distributions/elasticsearch-jieba-plugin-7.7.0.zip <es_install_dir>/plugins
+cp build/distributions/elasticsearch-jieba-plugin-7.12.1.zip <es_install_dir>/plugins
 cd <es_install_dir>/plugins
-unzip elasticsearch-jieba-plugin-7.7.0.zip
-rm elasticsearch-jieba-plugin-7.7.0.zip
+unzip elasticsearch-jieba-plugin-7.12.1.zip
+rm elasticsearch-jieba-plugin-7.12.1.zip
 ```
 - 启动ES
 ```shell script
@@ -128,11 +128,11 @@ POST http://localhost:9200/jieba_index/_analyze
 - 将`test.dict`拷贝到`<es_install_dir>/plugins/jieba/dic`，注意ES不需要重启，等待60s后，看到ES有如下的日志：
 ```shell script
 [2020-06-06T22:30:16,486][INFO ][stdout                   ] [cheng] start to load new dict
-[2020-06-06T22:30:16,487][INFO ][stdout                   ] [cheng] initialize user dictionary:/Users/cheng/Downloads/elasticsearch-7.7.0/plugins/jieba/dic
-[2020-06-06T22:30:16,487][INFO ][stdout                   ] [cheng] already loaded: /Users/cheng/Downloads/elasticsearch-7.7.0/plugins/jieba/dic/test2.dict
-[2020-06-06T22:30:16,488][INFO ][stdout                   ] [cheng] already loaded: /Users/cheng/Downloads/elasticsearch-7.7.0/plugins/jieba/dic/sougou.dict
-[2020-06-06T22:30:16,490][INFO ][stdout                   ] [cheng] user dict /Users/cheng/Downloads/elasticsearch-7.7.0/plugins/jieba/dic/test.dict load finished, tot words:4, time elapsed:1ms
-[2020-06-06T22:30:16,491][INFO ][stdout                   ] [cheng] already loaded: /Users/cheng/Downloads/elasticsearch-7.7.0/plugins/jieba/dic/user.dict
+[2020-06-06T22:30:16,487][INFO ][stdout                   ] [cheng] initialize user dictionary:/Users/cheng/Downloads/elasticsearch-7.12.1/plugins/jieba/dic
+[2020-06-06T22:30:16,487][INFO ][stdout                   ] [cheng] already loaded: /Users/cheng/Downloads/elasticsearch-7.12.1/plugins/jieba/dic/test2.dict
+[2020-06-06T22:30:16,488][INFO ][stdout                   ] [cheng] already loaded: /Users/cheng/Downloads/elasticsearch-7.12.1/plugins/jieba/dic/sougou.dict
+[2020-06-06T22:30:16,490][INFO ][stdout                   ] [cheng] user dict /Users/cheng/Downloads/elasticsearch-7.12.1/plugins/jieba/dic/test.dict load finished, tot words:4, time elapsed:1ms
+[2020-06-06T22:30:16,491][INFO ][stdout                   ] [cheng] already loaded: /Users/cheng/Downloads/elasticsearch-7.12.1/plugins/jieba/dic/user.dict
 ```
 - 重新查询分词
 ```shell script
